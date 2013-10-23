@@ -49,11 +49,9 @@ class LoginModel {
 		}
 		return false;
 	}
-	//@TODO: Ska användas att kolla om session för att adda medlem är satt
-	//@TODO: nu visas inte sidan igen om jag klickar tillbaka (utan !)
 	public function isAddingMember()
 	{
-		if(!isset($_SESSION["addMember"])){
+		if(isset($_SESSION["addMember"])){
 			return true;
 		}
 	}
